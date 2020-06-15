@@ -18,7 +18,13 @@ namespace IceCreamShop
 
         public override string ToString()
         {
-            return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + Allergens + "\n";
+            string allergens = "";
+            foreach( string allergen in Allergens)
+            {
+                allergens += "(" + allergen + ") ";
+            }
+
+            return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + allergens + "\n";
         }
     }
 }
